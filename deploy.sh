@@ -29,13 +29,15 @@ killTomcat
 # 删除原有工程
 rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
+rm -rf $TOMCAT_APP_PATH/webapps/root
+rm -f $TOMCAT_APP_PATH/webapps/root.war
 rm -f $TOMCAT_APP_PATH/webapps/order.war
 
 # 复制新的工程
 cp $PROJ_PATH/order/target/order.war $TOMCAT_APP_PATH/webapps/
 
 cd $TOMCAT_APP_PATH/webapps/
-mv order.war ROOT.war
+mv order.war root.war
 
 # 启动Tomcat
 cd $TOMCAT_APP_PATH/
